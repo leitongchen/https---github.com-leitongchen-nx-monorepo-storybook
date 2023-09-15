@@ -1,0 +1,17 @@
+$roboto: 'Roboto';
+// $amy-icons: 'amy-icons';
+
+@font-face {
+  font-family: $roboto;
+  src: url('../assets/fonts/roboto/Roboto-400.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: $amy-icons;
+//   src: url('../assets/fonts/amy-icons/amy-icons.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
