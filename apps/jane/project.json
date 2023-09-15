@@ -15,6 +15,10 @@
         "main": "apps/jane/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/jane/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/ui/src/lib/styles"]
+        },
         "assets": ["apps/jane/src/favicon.ico", "apps/jane/src/assets"],
         "styles": ["apps/jane/src/styles.scss"],
         "scripts": []
