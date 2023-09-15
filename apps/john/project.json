@@ -15,6 +15,10 @@
         "main": "apps/john/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/john/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/ui/src/lib/styles"]
+        },
         "assets": ["apps/john/src/favicon.ico", "apps/john/src/assets"],
         "styles": ["apps/john/src/styles.scss"],
         "scripts": []
