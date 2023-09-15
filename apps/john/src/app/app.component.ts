@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { exampleProducts } from '@storybook/products';
 
 @Component({
   selector: 'storybook-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'john';
+  products = exampleProducts;
 }

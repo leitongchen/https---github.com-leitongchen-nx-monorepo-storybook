@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@storybook/banner": ["libs/ui-components/banner/src/index.ts"],
       "@storybook/button": ["libs/ui-components/button/src/index.ts"],
       "@storybook/link": ["libs/ui-components/link/src/index.ts"],
       "@storybook/products": ["libs/products/src/index.ts"],
