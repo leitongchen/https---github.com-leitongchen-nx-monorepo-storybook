@@ -12,6 +12,6 @@
     "../src/**/*.stories.mdx",
     "*.js",
     "*.ts",
-    "../../**/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)"
+    "../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)"
   ]
 }
