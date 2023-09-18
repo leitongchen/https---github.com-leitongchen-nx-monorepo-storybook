@@ -56,7 +56,7 @@
         "configDir": "libs/ui-components/storybook-host/.storybook",
         "browserTarget": "storybook-host:build-storybook",
         "compodoc": false,
-        "styles": ["libs/ui/src/lib/styles/app.scss"],
+        "styles": ["libs/ui-components/storybook-host/src/lib/styles/app.scss"],
         "stylePreprocessorOptions": {
           "includePaths": ["libs/ui/src/lib/styles"]
         }

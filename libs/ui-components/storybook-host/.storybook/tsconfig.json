@@ -5,13 +5,12 @@
   },
   "exclude": ["../**/*.spec.ts"],
   "include": [
-    "../src/**/*.stories.ts",
-    "../src/**/*.stories.js",
-    "../src/**/*.stories.jsx",
-    "../src/**/*.stories.tsx",
-    "../src/**/*.stories.mdx",
+    "../../**/src/lib/**/*.stories.ts",
+    "../../**/src/lib/**/*.stories.js",
+    "../../**/src/lib/**/*.stories.jsx",
+    "../../**/src/lib/**/*.stories.tsx",
+    "../../**/src/lib/**/*.stories.mdx",
     "*.js",
-    "*.ts",
-    "../../**/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)"
+    "*.ts"
   ]
 }
