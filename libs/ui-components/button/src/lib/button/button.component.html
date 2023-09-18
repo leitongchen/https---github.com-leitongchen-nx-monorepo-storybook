@@ -1,1 +1,7 @@
-<button class="main">Click Me</button>>
+<button *ngIf="type === 'filled'" [class.filled]="type === 'filled'">
+  Filled Button
+</button>
+
+<button *ngIf="type === 'clear'" [class.clear]="type === 'clear'">
+  Clear Button
+</button>

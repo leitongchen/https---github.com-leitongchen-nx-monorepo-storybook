@@ -1,7 +1,16 @@
-button.main {
-  background-color: orange;
-}
+button {
+  cursor: pointer;
+  border-style: solid;
+  border: 0;
 
-button.clear {
-  color: blueviolet;
+  &.filled {
+    background-color: rgb(83, 134, 110);
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
+
+  &.clear {
+    color: blueviolet;
+  }
 }

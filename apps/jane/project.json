@@ -19,7 +19,14 @@
         "stylePreprocessorOptions": {
           "includePaths": ["libs/ui/src/lib/styles"]
         },
-        "assets": ["apps/jane/src/favicon.ico", "apps/jane/src/assets"],
+        "assets": [
+          "apps/jane/src/favicon.ico",
+          {
+            "glob": "**/*",
+            "input": "apps/jane/src/assets/",
+            "output": "/"
+          }
+        ],
         "styles": ["apps/jane/src/styles.scss"],
         "scripts": []
       },
