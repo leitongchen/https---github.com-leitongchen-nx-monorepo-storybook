@@ -9,6 +9,10 @@
         <source> Clear Button </source>
         <target>Pulsante pulito</target>
       </trans-unit>
+      <trans-unit id="81336398834780124" datatype="html">
+        <source>I am a <x id="INTERPOLATION" equiv-text="{{ title }}"/></source>
+        <target>Io sono <x id="INTERPOLATION" equiv-text="{{ title }}"/></target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
