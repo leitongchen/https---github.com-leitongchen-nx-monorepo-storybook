@@ -4,12 +4,22 @@
   "projectType": "application",
   "prefix": "storybook",
   "sourceRoot": "apps/john/src",
+  "i18n": {
+    "sourceLocale": "en",
+    "locales": {
+      "it": {
+        "translation": "locales/all.it.xlf",
+        "baseHref": "it/"
+      }
+    }
+  },
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "localize": ["en", "it"],
         "outputPath": "dist/apps/john",
         "index": "apps/john/src/index.html",
         "main": "apps/john/src/main.ts",
@@ -24,6 +34,12 @@
         "scripts": []
       },
       "configurations": {
+        "en": {
+          "localize": ["en"]
+        },
+        "it": {
+          "localize": ["it"]
+        },
         "production": {
           "budgets": [
             {
@@ -58,14 +74,23 @@
         },
         "development": {
           "browserTarget": "john:build:development"
+        },
+        "en": {
+          "browserTarget": "john:build:development,en"
+        },
+        "it": {
+          "browserTarget": "john:build:development,it"
         }
       },
       "defaultConfiguration": "development"
     },
     "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "executor": "ng-extract-i18n-merge:ng-extract-i18n-merge",
       "options": {
-        "browserTarget": "john:build"
+        "browserTarget": "john:build",
+        "format": "xlf",
+        "outputPath": "apps/john/src/locale",
+        "targetFiles": ["messages.it.xlf"]
       }
     },
     "lint": {

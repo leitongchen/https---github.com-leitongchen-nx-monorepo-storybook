@@ -4,12 +4,22 @@
   "projectType": "application",
   "prefix": "storybook",
   "sourceRoot": "apps/jane/src",
+  "i18n": {
+    "sourceLocale": "en",
+    "locales": {
+      "it": {
+        "translation": "locales/all.it.xlf",
+        "baseHref": "it/"
+      }
+    }
+  },
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "localize": ["en", "it"],
         "outputPath": "dist/apps/jane",
         "index": "apps/jane/src/index.html",
         "main": "apps/jane/src/main.ts",
@@ -31,6 +41,12 @@
         "scripts": []
       },
       "configurations": {
+        "en": {
+          "localize": ["en"]
+        },
+        "it": {
+          "localize": ["it"]
+        },
         "production": {
           "budgets": [
             {
@@ -65,14 +81,23 @@
         },
         "development": {
           "browserTarget": "jane:build:development"
+        },
+        "en": {
+          "browserTarget": "jane:build:development,en"
+        },
+        "it": {
+          "browserTarget": "jane:build:development,it"
         }
       },
       "defaultConfiguration": "development"
     },
     "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "executor": "ng-extract-i18n-merge:ng-extract-i18n-merge",
       "options": {
-        "browserTarget": "jane:build"
+        "browserTarget": "jane:build",
+        "format": "xlf",
+        "outputPath": "apps/jane/src/locale",
+        "targetFiles": ["messages.it.xlf"]
       }
     },
     "lint": {
